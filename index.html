@@ -1,7 +1,7 @@
 <!-- Unit 5 Project
 Requirements
-[  ] <div> and <span>
-[  ] height: and width:
+[yes ] <div> and <span>
+[ yes ] height: and width:
 [  ] margin: and padding: 
 [ yes ] Three Images (fortune cards that 
 mean the end of the world(flip_) On the back
@@ -23,7 +23,19 @@ Select ONE Additional Feature to Add
   <title>Unit 5 Project</title>
   <meta charset="utf-8">
   <style>
-
+body{ 
+  font-family: cursive; 
+    }
+   .photo-gallery { 
+     background: rgb(255, 254, 217);
+    }  
+    
+    .photo{  
+      width: 200px;  
+      margin: 20px;  
+      border: 5px solid lightblue;  
+      padding: 5px;
+    }
   </style>
 </head>
 <body>
@@ -80,7 +92,14 @@ Select ONE Additional Feature to Add
     </style>
   </head>
   <body>
-    <h1>The end of the world</h1>
+    <h1>The <span class="first sentence">end</span> of the world</h1>
+  <style>.first-sentence { 
+    color: red; 
+    font-style: italic;
+    text-decoration: underline; 
+    } 
+    
+    </style>
     <div class="main">
     <div class="flip-card">
       <div class="flip-card-inner">
@@ -129,5 +148,4 @@ Select ONE Additional Feature to Add
       </div>
     </div>
   </body>
-</body>
 </html>
