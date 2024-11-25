@@ -2,7 +2,7 @@
 Requirements
 [yes ] <div> and <span>
 [ yes ] height: and width:
-[  ] margin: and padding: 
+[ yes  ] margin: and padding: 
 [ yes ] Three Images (fortune cards that 
 mean the end of the world(flip_) On the back
 of each will say "the" worlds "end"
@@ -18,30 +18,35 @@ Select ONE Additional Feature to Add
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Unit 5 Project</title>
+    <meta charset="utf-8" />
+    <style>
+       {
+        font-family: cursive;
+      }
+      .photo-gallery {
+        background: rgb(255, 254, 217);
+      }
 
-<head>
-  <title>Unit 5 Project</title>
-  <meta charset="utf-8">
-  <style>
-body{ 
-  font-family: cursive; 
-    }
-   .photo-gallery { 
-     background: rgb(255, 254, 217);
-    }  
-    
-    .photo{  
-      width: 200px;  
-      margin: 20px;  
-      border: 5px solid lightblue;  
-      padding: 5px;
-    }
-  </style>
-</head>
-<body>
-<style>
-      body 
-  {
+      .photo {
+        width: 200px;
+        margin: 20px;
+        border: 5px solid lightblue;
+        padding: 5px;
+      }
+
+      .info {
+        background: rgb(219, 235, 255);
+        width: 70%;
+        height: 180px;
+        overflow-y: auto;
+      }
+      .pic {
+        width: 70%;
+      }
+
+      body {
         font-family: Arial, Helvetica, sans-serif;
       }
 
@@ -85,65 +90,76 @@ body{
         color: white;
         transform: rotateY(180deg);
       }
-      .main
-      {background-color: black;
-      display:flex;
+      .main {
+        background-color: black;
+        display: flex;
+      }
+      .first-sentence {
+        color: red;
+        font-style: italic;
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
+    <img
+      src="https://th.bing.com/th/id/OIP.nc00UVnfq0mtcT8ro2zbvQHaKQ?rs=1&pid=ImgDetMain"
+      alt="Avatar"
+      width="300px"
+         class="photo"
+    />
+    <img
+      src="https://img-v3.deepdreamgenerator.com/202553/md_ctcrsh_5a919eab9ae3e99c50d7e899f646cb81aee40573.jpg?v=1"
+      alt="Avatar"
+      width="300px"
+    />
     <h1>The <span class="first sentence">end</span> of the world</h1>
-  <style>.first-sentence { 
-    color: red; 
-    font-style: italic;
-    text-decoration: underline; 
-    } 
-    
-    </style>
+
     <div class="main">
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img
-            src="https://tse1.mm.bing.net/th?id=OIP.WJtp05BPuj7SFVDDVYMGvwHaKQ&pid=ImgDet&w=159&h=219&c=7"
-            alt="Avatar"
-            style="width: 300px; height: 300px"
-          />
-        </div>
-        <div class="flip-card-back">
-          <h1>THE</h1>
-          <p>END</p>
-          <p></p>
-        </div>
-      </div>
-    </div>
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img
-            src="https://tse2.mm.bing.net/th?id=OIP.Fy0JT_JaH7NtXoaiWtYbiQHaHa&pid=ImgDet&w=159&h=159&c=7"
-            alt="Avatar"
-            style="width: 300px; height: 300px"
-          />
-        </div>
-        <div class="flip-card-back">
-          <h1>WORLDS</h1>
-          <p>END</p>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.WJtp05BPuj7SFVDDVYMGvwHaKQ&pid=ImgDet&w=159&h=219&c=7"
+              alt="Avatar"
+              style="width: 300px; height: 300px"
+            />
+          </div>
+          <div class="flip-card-back">
+            <h1>THE</h1>
+            <p>END</p>
+            <p></p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img
-            src="https://th.bing.com/th/id/OIP.nc00UVnfq0mtcT8ro2zbvQHaKQ?rs=1&pid=ImgDetMain"
-            alt="Avatar"
-            style="width: 300px; height: 300px"
-          />
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="https://tse2.mm.bing.net/th?id=OIP.Fy0JT_JaH7NtXoaiWtYbiQHaHa&pid=ImgDet&w=159&h=159&c=7"
+              alt="Avatar"
+              style="width: 300px; height: 300px"
+            />
+          </div>
+          <div class="flip-card-back">
+            <h1>WORLDS</h1>
+            <p>END</p>
+          </div>
         </div>
-        <div class="flip-card-back">
-          <h1>END</h1>
-          <p>END</p>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="https://th.bing.com/th/id/OIP.nc00UVnfq0mtcT8ro2zbvQHaKQ?rs=1&pid=ImgDetMain"
+              alt="Avatar"
+              style="width: 300px; height: 300px"
+            />
+          </div>
+          <div class="flip-card-back">
+            <h1>END</h1>
+            <p>END</p>
+          </div>
         </div>
       </div>
     </div>
