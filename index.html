@@ -1,13 +1,15 @@
 <!-- Unit 5 Project
 Requirements
-[  ] <div> and <span>
-[  ] height: and width:
-[  ] margin: and padding: 
-[  ] Three Images
+[yes ] <div> and <span>
+[ yes ] height: and width:
+[ yes  ] margin: and padding: 
+[ yes ] Three Images (fortune cards that 
+mean the end of the world(flip_) On the back
+of each will say "the" worlds "end"
 
 Select ONE Additional Feature to Add  
 [ no ] Feature 1 - Flexbox
-[ no ] Feature 2 - Flip Card
+[yes ] Feature 2 - Flip Card
 [ no ] Feature 3 - Navbar
 [ no ] Feature 4 - Shaking Animation
 [ no ] Feature 5 - Gradient Background
@@ -16,17 +18,150 @@ Select ONE Additional Feature to Add
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Unit 5 Project</title>
+    <meta charset="utf-8" />
+    <style>
+       {
+        font-family: cursive;
+      }
+      .photo-gallery {
+        background: rgb(255, 254, 217);
+      }
 
-<head>
-  <title>Unit 5 Project</title>
-  <meta charset="utf-8">
-  <style>
+      .photo {
+        width: 200px;
+        margin: 20px;
+        border: 5px solid lightblue;
+        padding: 5px;
+      }
 
-  </style>
-</head>
-<body>
+      .info {
+        background: rgb(219, 235, 255);
+        width: 70%;
+        height: 180px;
+        overflow-y: auto;
+      }
+      .pic {
+        width: 70%;
+      }
 
- 
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-</body>
+      .flip-card {
+        background-color: darkred;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      .flip-card-back {
+        background-color: #2980b9;
+        color: white;
+        transform: rotateY(180deg);
+      }
+      .main {
+        background-color: black;
+        display: flex;
+      }
+      .first-sentence {
+        color: red;
+        font-style: italic;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://th.bing.com/th/id/OIP.nc00UVnfq0mtcT8ro2zbvQHaKQ?rs=1&pid=ImgDetMain"
+      alt="Avatar"
+      width="300px"
+         class="photo"
+    />
+    <img
+      src="https://img-v3.deepdreamgenerator.com/202553/md_ctcrsh_5a919eab9ae3e99c50d7e899f646cb81aee40573.jpg?v=1"
+      alt="Avatar"
+      width="300px"
+    />
+    <h1>The <span class="first sentence">end</span> of the world</h1>
+
+    <div class="main">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.WJtp05BPuj7SFVDDVYMGvwHaKQ&pid=ImgDet&w=159&h=219&c=7"
+              alt="Avatar"
+              style="width: 300px; height: 300px"
+            />
+          </div>
+          <div class="flip-card-back">
+            <h1>THE</h1>
+            <p>END</p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="https://tse2.mm.bing.net/th?id=OIP.Fy0JT_JaH7NtXoaiWtYbiQHaHa&pid=ImgDet&w=159&h=159&c=7"
+              alt="Avatar"
+              style="width: 300px; height: 300px"
+            />
+          </div>
+          <div class="flip-card-back">
+            <h1>WORLDS</h1>
+            <p>END</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="https://th.bing.com/th/id/OIP.nc00UVnfq0mtcT8ro2zbvQHaKQ?rs=1&pid=ImgDetMain"
+              alt="Avatar"
+              style="width: 300px; height: 300px"
+            />
+          </div>
+          <div class="flip-card-back">
+            <h1>END</h1>
+            <p>END</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
